@@ -1,0 +1,32 @@
+# move into ~/.config/starship.toml
+
+format = """
+[$directory](bold cyan)($git_branch$git_state$git_status)
+$time $hostname $username [>](bold green) """
+
+[directory]
+style = "bold cyan"
+truncate_to_repo = false
+truncation_length = 1
+
+[hostname]
+style = "bold white"
+format = "[$hostname]($style)"
+ssh_only = false
+
+[username]
+style_user = "bold white"
+format = "[$user]($style)"
+show_always = true
+
+[time]
+time_format = "%H:%M"
+format = "[$time]($style)"
+disabled = false
+
+[git_branch]
+style = "bold green"
+format = "[\\[[$branch$tag](bold green)\\]](bold white)"
+
+[git_status]
+format = ' ([\[$conflicted$deleted$renamed$modified$staged$untracked$ahead_behind\]]($style))'

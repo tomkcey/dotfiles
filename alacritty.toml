@@ -1,0 +1,35 @@
+# move into ~/.config/alacritty/alacritty.toml
+
+live_config_reload = true
+
+shell = { program = "/bin/bash", args = ["-l", "-c", "tmux"] }
+
+[env]
+TERM = "alacritty"
+
+[window]
+dynamic_title = true
+startup_mode = "Maximized"
+padding = { x = 8, y = 8 }
+opacity = 0.9
+
+[scrolling]
+history = 10000
+
+[selection]
+save_to_clipboard = true
+
+[font]
+normal = { family = "HackNerdFontMono", style = "Regular" }
+bold = { family = "HackNerdFontMono", style = "Bold" }
+italic = { family = "HackNerdFontMono", style = "Italic" }
+bold_italic = { family = "HackNerdFontMono", style = "Bold Italic" }
+
+[keyboard]
+bindings = [
+    { action = "Copy", key = "C", mods = "Control|Shift" },
+    { action = "Paste", key = "V", mods = "Control|Shift" }
+]
+
+[mouse]
+hide_when_typing = true
